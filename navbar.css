@@ -1,0 +1,93 @@
+#navbar{
+    width: 100%;
+      display: flex;
+     justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    padding: 20px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: -webkit-sticky;
+position: sticky;
+top: 0;
+z-index: 1; 
+      margin: auto;
+      background-color: white;
+     
+     
+  }
+  .search {
+width: 100%;
+height: 100%;
+position: relative;
+display: flex;
+
+}
+
+.searchTerm {
+width: 100%;
+height: 80px;
+border: 3px solid #00B4CC;
+border-right: none;
+padding: 5px;
+border-radius: 5px 0 0 5px;
+outline: none;
+color: #9DBFAF;
+}
+
+.searchTerm:focus{
+color: #00B4CC;
+}
+
+.searchButton {
+width: 19%;
+height: 80px;
+border: 1px solid #00B4CC;
+background: #00B4CC;
+text-align: center;
+color: #fff;
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+width: 30%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+ 
+  #navbar img{
+   height: 70px;
+  }
+  #navbar>div:nth-child(3){
+    width: 30%;
+   display: block;
+   display: flex;
+   justify-content: space-around;
+  
+    
+  }
+  #navbar>div>a{
+    font-family:Arial, Helvetica, sans-serif;
+    border: 3px solid rgb(6, 130, 158);
+    background-color: rgb(6, 130, 158) ;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 30px;
+    
+  }
+  #navbar a:hover{
+    background-color: white;
+    color: black;
+  }
+  *{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
