@@ -4,9 +4,743 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vast Systems</title>
 </head>
-<body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
     
+    body{
+        margin: 0px;
+        padding:0px;
+
+    }
+    a{
+        text-decoration: none;
+
+    }
+    #nav,nav{
+        background-color: rgb(201, 205, 205);
+    }
+    #navbar{
+      width: 100%;
+        display: flex;
+       justify-content: space-between;
+        align-items: center;
+        height: 100px;
+      padding: 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position: relative;
+        margin: auto;
+       
+    }
+    .search {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+ 
+}
+
+.searchTerm {
+  width: 100%;
+  height: 80px;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 19%;
+  height: 80px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+   
+    #navbar img{
+     height: 70px;
+    }
+    #navbar>div:nth-child(3){
+      width: 30%;
+     display: block;
+     display: flex;
+     justify-content: space-around;
+    
+      
+    }
+    #navbar>div>a{
+      font-family:Arial, Helvetica, sans-serif;
+      border: 3px solid rgb(6, 130, 158);
+      background-color: rgb(6, 130, 158) ;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      
+    }
+    #navbar a:hover{
+      background-color: white;
+      color: black;
+    }
+   
+   a{
+    text-decoration: none;
+    font-size: 30px;
+
+   }
+   #nav{
+    display: flex;
+   gap: 40px;
+   padding-left:  80px;
+   padding-top: 10px;
+
+   }
+  
+  .dropdown{
+    position: relative;
+    cursor: pointer;
+  }
+  .dropdown > a{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 72px;
+  }
+  
+  .dropdown:hover .menu{
+    opacity:1;
+    visibility: visible;
+  }
+  .menu>a{
+    font-size:14px;
+    padding:12px 20px;
+
+  }
+  .menu > a:hover{
+    background-color:rgb(164, 163, 163);
+  }
+ 
+  .menu{
+    position: absolute;
+    display: grid;
+    width: 180px;
+    padding: 8px 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: red;
+   visibility:hidden;
+   transition: 0.25s;
+  } 
+   
+  /* /* .menu::before{
+    content: "";
+    background:inherit;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+
+  }/*
+  */
+
+  #mid{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    gap:30px;
+    padding: 20px;
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+  }
+  
+  #mid1>img{
+    width:100%
+  }
+  #mid1{
+    position: relative;
+    color:white;
+    
+  }
+  #mid1>div{
+    position: absolute;
+  bottom: 30%;
+  color: white;
+  padding-left: 40px;
+  padding-right: 20px;
+  }
+  #mid1 button{
+    font-size: 30px;
+    border: 3px solid white;
+  }
+
+ #hea>p{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #explore{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #explore>div{
+    width: 90%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-color: black;
+        color: white;
+        
+  }
+  #explore>img{
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+
+  }
+  #server{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    margin-top: 80px;
+    font-size: 25px;
+    gap: 30px;
+    margin: auto;
+
+  }
+  #server>div:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:70px;
+   
+  }
+  #server img{
+    width: 100%;
+  }
+  #support{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    font-size: 40px;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  #support a{
+    font-size: 45px;
+  }
+  #support>div>p:nth-child(1){
+    font-size: 50px;
+  }
+  #support img{
+    width: 60px;
+   
+
+  }
+  #server1{
+    width: 100%;
+   display: flex;
+   justify-content: space-around;
+    
+    margin-top: 80px;
+    font-size: 25px;
+  
+    text-align: center;
+    margin: auto;
+
+  }
+  #server1>div:nth-child(2){
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:70px;
+   
+    padding-left: 30px;
+  }
+  #server1>div:nth-child(1){
+    width: 50%;
+  }
+  #server1 img{
+    width: 100%;
+  }
+  #bf{
+    width: 90%;
+    margin: auto;
+    padding:20px;
+   
+  }
+  #slide{
+    width: 100%;
+    margin: auto;
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px
+  }
+  .show{
+    background-color: rgb(253, 253, 251);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .show>div{
+    width: 90%;
+    display: flex;
+    gap: 30px;
+   margin: auto;
+    font-size: 30px;
+  }
+  #footer{
+    background-color: rgb(241, 235, 235);
+    padding: 30px;
+    font-size: 20px;
+  }
+  .nyc{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    
+  }
+  .hi{
+    width: 90%;
+    display: flex;
+    gap:30px;
+    margin: auto;
+  }
+  
+
+
+</style>
+<body>
+    <!-- <nav id = "navbar">
+        <img src="./images/Systems and technology programming company logo.png" alt="" id = "logo">
+        <a href="./index.html"></a>
+        
+        <div>
+          <input type="text">
+          <button>search
+          </button>
+        </div>
+        
+            <a href="">Sign in</a>
+            <a href="">Contact us</a>
+            <a href="">Cart</a>
+       <div>
+    </nav> -->
+    <div id="navbar">
+      <img src="./images/Systems and technology programming company logo1.png" alt="">
+      <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton"><b>^</b>
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+       
+      <div>
+        <a href="">SignIn</a>
+      <a href="">Contact Us</a>
+      <a href="">Cart</a>
+      </div>
+      
+    </div>
+    <div id = "nav">
+      <div class="dropdown">
+        <a href="">APEX</a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+    <div class="dropdown">
+        <a href="">PRODUCT</a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+    <div class="dropdown">
+        <a href="">SOLUTIONS</a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+    <div class="dropdown">
+        <a href="">SUPPORT</a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+    <div class="dropdown">
+        <a href="">SUPPORT</a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+    <div class="dropdown">
+        <a href=""></a>
+    <div class="menu">
+        <a href="">ddd</a>
+        <a href="">dfds</a>
+        <a href="">dfsdf</a>
+        <a href="">sdfs</a>
+    </div>
+    </div>
+</div>
+      
+       </div>
+       <div id="mid">
+          <div>
+            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+            <h3>Moniter</h3>
+          </div>
+          <div>
+            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+            <h3>Moniter</h3>
+          </div>
+          <div>
+            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+            <h3>Moniter</h3>
+          </div>
+          <div>
+            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+            <h3>Moniter</h3>
+          </div>
+          <div>
+            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+            <h3>Moniter</h3>
+          </div>
+       </div>
+       <div id ="mid1">
+        <div>
+            <p style="font-size: 40px;">MDR PRO PLUS</p>
+        
+            <p style="font-size: 60px;">Resolve Top SecOps Concerns</p>
+     
+            <p style="font-size: 40px;">Fully managed, 360° SecOps solution across endpoints, network and cloud.</p>
+            <button>Learn more</button>
+        </div>
+       
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0316-security-mdr-2400x696.png?fmt=png&op_usm=1.75,0.3,2,0&resMode=sharp2&size=1536,446&hei=446&wid=1536" alt="">
+       </div>
+       <div id="hea">
+        <p>Explore Dell Technologies</p>
+       </div>
+      
+       <div id="explore">
+        <div>
+                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0302-innovationindex-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p>Thought Leadership Innovation Index</p>
+        </div>
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0316-apex-sustainability-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p>Thought Leadership Innovation Index</p>
+         </div>
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0302-dtw23-withlogo-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p>Thought Leadership Innovation Index</p>
+        </div>
+       </div>
+    <div id = "server">
+        <div>
+            <p>
+                SERVERS,STORAGE,NETWORKING
+            </p>
+            <P style="font-size: 50px;">Flexible, Scalable IT Solutions</P>
+            <p  style="font-size: 30px;">Power transformation with server, storage and network <br> solutions that adapt and scale to your business needs.</p>
+           <div> <a href="">Explore Services</a> | <a href="">Explore Services</a></div>
+        </div>
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/servers-storage-network-left-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+        </div>
+    </div>
+    <div id = "support">
+        <div>
+            <p>Dell Support</p>
+            <p>Get your question answered</p>
+        </div>
+        <div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.gaCWQ39wYNYcNorpQxbSaQHaIr?w=153&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+                <a href="">Dell Technologies Advisors</a>
+                <p>Let us assist you with any product or services questions</p>
+                <hr>
+            </div>
+            <div>
+                <a href="">Warranty and Contracts</a>
+                <p>Check warranty of the product</p>
+                <hr>
+            </div>
+            <div>
+                <a href="">Drivers and Downloads</a>
+                <p>Get the latest divers and softwares</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id = "server1">
+
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/dell-powerstore-base-bezel-rf-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+        </div>
+
+
+        <div>
+            <p>
+                POWERSTORE
+            </p>
+            <P style="font-size: 40px;">The Future Of Storage Is Now</P>
+            <p  style="font-size: 30px;">Future-proof intelligent storage that redefines <br> performance.</p>
+          <a href="">Learn more</a>
+        </div>
+        
+       
+       
+
+    </div>
+
+    <div id = "server">
+
+        <div>
+            <p>
+               HANDS-ON LABS
+            </p>
+            <P style="font-size: 40px;">Test-Drive IT Solutions</P>
+            <p  style="font-size: 30px;">Dive deeper into cutting-edge infrastructure technology <br> with real-time interactive demos.</p>
+          <a href="">Learn more</a>
+        </div>
+        
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/1117-handsonlab-leftfacing-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+        </div>
+       
+    </div>
+    <div style="display:flex;flex-direction: column;align-items: center;justify-content:center;margin-top: 20px;background-color: rgb(246, 247, 247);padding:50px">
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="" style="width:100px">
+        <P style="font-size: 40px;">Give Your Device A Second Life</P>
+        <p style="font-size: 30px;">Recycling your old tech helps us create responsible solutions.</p>
+        <a href="">Get Started</a>
+    </div>
+    <div id = "server1">
+
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/precision-rightface-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+        </div>
+
+
+        <div>
+            <p>
+               PRECISION
+            </p>
+            <P style="font-size: 40px;">Power Your Passion</P>
+            <p  style="font-size: 30px;">Precision workstations provide the performance you need <br>to turn your creations into masterpieces.</p>
+          <a href="">Shop Now</a>
+        </div>
+        
+       
+       
+
+    </div>
+    <div id = "server">
+        <div>
+            <p>
+                CUSTOMER SUCCESS STORIES
+            </p>
+            <P style="font-size: 50px;">Texas Advanced Computing Center</P>
+            <p  style="font-size: 30px;">Digital abstract screens in cyberspace</p>
+            <a href="">Learn More</a>
+        </div>
+        <div>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0222-telecombanner-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+        </div>
+    </div>
+    <div id="bf">
+        <div>
+            <P style="font-size: 50px;">We are Dell Technologies</P>
+        </div>
+        <div id="slide">
+            <div class = "show">
+                <div>
+                    <P style="font-size: 40px;">What We Do</P>
+               </div>
+                <div>
+                <div>
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                </div>
+                <div>
+                    <p>Our end-to-end solutions help and support you build a better tomorrow</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            </div>
+            <div class = "show">
+                <div>
+                    <P style="font-size: 40px;">What We Do</P>
+               </div>
+                <div>
+                <div>
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                </div>
+                <div>
+                    <p>Our end-to-end solutions help and support you build a better tomorrow</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            </div>
+            <div class = "show">
+                <div>
+                    <P style="font-size: 40px;">What We Do</P>
+               </div>
+                <div>
+                <div>
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                </div>
+                <div>
+                    <p>Our end-to-end solutions help and support you build a better tomorrow</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            </div>
+            <div class = "show">
+                <div>
+                     <P style="font-size: 40px;">What We Do</P>
+                </div>
+                <div>
+                <div>
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                </div>
+                <div>
+                    <p>Our end-to-end solutions help and support you build a better tomorrow</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            </div>
+        </div> 
+       
+       
+       
+    </div>
+    <div id="footer">
+        <div class="nyc">
+            <div>
+                <p>IN/EN</p>
+                <p>Site Map</p>
+            </div>
+            <div>
+               <h3>Account</h3>
+                <p>My Account</p>
+                <p>Order Status</p>
+                <p>My Products</p>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <p>Support Home</p>
+                <p>Contact Support</p>
+              
+            </div>
+            <div>
+                <h3>Connect with Us</h3>
+                <p>Community</p>
+                <p>Contact Us</p>
+                
+            </div>
+        </div>
+        <div class="nyc">
+            <div>
+                <h3>Our Offerings</h3>
+                <p>APEX</p>
+                <p>Products</p>
+                <p>Solutions</p>
+                <p>Services</p>
+                <p>Deals</p>
+            </div>
+            <div>
+               <h3>Our Company</h3>
+                <p>Who We Are</p>
+                <p>Careers</p>
+                <p>Dell Technologies Capital</p>
+                <p>Investors</p>
+                <p>Newsroom</p>
+                <p>Perpectives</p>
+                
+
+            </div>
+            <div>
+                <h3>Our Partners</h3>
+                <p>Find a Partner</p>
+                <p>OEM Solutions</p>
+                <p>Partner Program</p>
+              
+            </div>
+            <div>
+                <h3>Resources</h3>
+                <p>Blog</p>
+                <p>Events</p>
+                <p>Dell Learning Centre</p>
+                <p>Glossary
+                </p>
+                <p>Privacy Centre</p>
+                <p>Resource Library</p>
+                <p>Trial Software Downloads</p>
+
+                
+            </div>
+        </div>
+        <div class="hi">
+            <h3>Dell Technologies
+            </h3>
+            <h3>Premier</h3>
+        </div>
+        <div class="hi">
+            <p>Copyright @ 2023 Dell Inc</p>
+            <p>Terms fo Sale</p>
+            <p>Privacy Statement</p>
+            <p>Legal & Regulatory</p>
+        </div>
+    </div>
 </body>
 </html>
