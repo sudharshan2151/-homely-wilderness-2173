@@ -31,8 +31,13 @@
         height: 100px;
       padding: 20px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        position: relative;
+        position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
         margin: auto;
+        background-color: white;
+       
        
     }
     .search {
@@ -114,6 +119,7 @@
    gap: 40px;
    padding-left:  80px;
    padding-top: 10px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
    }
   
@@ -125,7 +131,7 @@
     display: flex;
     align-items: center;
     gap: 3px;
-    height: 72px;
+   height: 72px;
   }
   
   .dropdown:hover .menu{
@@ -133,7 +139,7 @@
     visibility: visible;
   }
   .menu>a{
-    font-size:14px;
+    font-size:30px;
     padding:12px 20px;
 
   }
@@ -147,7 +153,7 @@
     width: 180px;
     padding: 8px 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: red;
+    background-color:white;
    visibility:hidden;
    transition: 0.25s;
   } 
@@ -165,13 +171,10 @@
   #mid{
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(234, 234, 234);
     gap:30px;
     padding: 20px;
-    position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1; 
+    
   }
   
   #mid1>img{
@@ -358,7 +361,7 @@
        <div>
     </nav> -->
     <div id="navbar">
-      <img src="./images/Systems and technology programming company logo1.png" alt="">
+      <img src="./images/Systems and technology programming company logo1.png" alt="" id="logo">
       <div class="wrap">
         <div class="search">
            <input type="text" class="searchTerm" placeholder="What are you looking for?">
@@ -369,7 +372,7 @@
      </div>
        
       <div>
-        <a href="">SignIn</a>
+        <a href="./signin.html">SignIn</a>
       <a href="">Contact Us</a>
       <a href="">Cart</a>
       </div>
@@ -430,12 +433,13 @@
         <a href="">sdfs</a>
     </div>
     </div>
+    </div>
 </div>
       
        </div>
        <div id="mid">
           <div>
-            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+          <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
             <h3>Moniter</h3>
           </div>
           <div>
@@ -623,7 +627,7 @@
                </div>
                 <div>
                 <div>
-                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0811-emergingtechnologies-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
                 </div>
                 <div>
                     <p>Our end-to-end solutions help and support you build a better tomorrow</p>
@@ -637,7 +641,7 @@
                </div>
                 <div>
                 <div>
-                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/1027-trailblazers-main-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
                 </div>
                 <div>
                     <p>Our end-to-end solutions help and support you build a better tomorrow</p>
@@ -651,7 +655,7 @@
                 </div>
                 <div>
                 <div>
-                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/slot-stop-at-nothing-innovator-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0707-tile-sprint12-703x423.png?fmt=jpg&wid=440&hei=268" alt="">
                 </div>
                 <div>
                     <p>Our end-to-end solutions help and support you build a better tomorrow</p>
@@ -743,4 +747,5 @@
         </div>
     </div>
 </body>
+<script src="img.js"></script>
 </html>

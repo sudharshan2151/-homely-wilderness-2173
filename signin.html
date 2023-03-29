@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn Page</title>
+</head>
+<link rel="stylesheet" href="navbar.css">
+<style>
+    body{
+        display: flex;
+      
+    }
+    .nyc{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #second{
+        width: 50%;
+        text-align: center;
+        background-color: rgb(245, 244, 244);
+    }
+    #second>img{
+        text-align: center;
+        width: 50%;
+    }
+    #second p{
+        font-size: 25px;
+        color:rgb(144, 144, 144);
+        font-weight: Roboto,sans-serif ;
+    }
+    .class h2{
+        font-size: 25px;
+        font-weight: Roboto,sans-serif ;
+    }
+    .class img{
+        width:100%;
+    }
+    #first{
+        width: 50%;
+    }
+    .container {
+  /* max-width: 600px; */
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  height: 500px;
+}
+
+form {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 50px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+ 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  font-weight: Roboto,sans-serif ;
+  font-size: 30px;
+  padding:30px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  /* styles for small screens */
+  .container {
+    padding: 10px;
+  }
+  
+  form {
+    padding: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button[type="submit"] {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+    @media screen and (max-width:800px) {
+        .nyc{
+        grid-template-columns: repeat(1,1fr);
+        }
+        body{
+       flex-direction: column;
+    }
+    }
+
+</style>
+<body>
+   <div id = "first">
+        <img src="./images/Systems and technology programming company logo1.png" alt="" id ="logo">
+        <div class="container">
+            <form>
+              <h2>Sign In</h2>
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+              <button type="submit" >Sign In</button>
+            </form>
+          </div>
+          
+    </div>
+    <div id = "second">
+        <p style="font-size: 50px;color:black">Dell Account Benefits</p>
+        <p>My Account is an easy, more centralized way to manage your tech. Sign Up Now!</p>
+        <div class="nyc">
+            <div>
+                <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-1-tracking-36x36.png" alt="">
+                <h2>Order Tracking</h2>
+                <p>Manage marketing, track shipping status and view support history </p>
+            </div>
+            <div>
+                <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-2-mail-36x36.png" alt="">
+                <h2>Manage Communications</h2>
+                <p>Manage marketing and communications preferences </p>
+            </div>
+            <div>
+                <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-3-profile-36x36.png" alt="">
+                <h2>Profile Setting</h2>
+                <p>Save your favorite payment method and shipping details for quicker checkout </p>
+            </div>
+           
+        </div>
+        <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/bannerimage460x460.png" alt="">
+</div>
+
+</body>
+<script src="img.js">
+
+</script>
+</html>
