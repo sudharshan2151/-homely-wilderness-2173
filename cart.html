@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div id="navbar">
+        <img src="./images/Systems and technology programming company logo1.png" alt="" id="logo">
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm" placeholder="What are you looking for?">
+             <button type="submit" class="searchButton"><b>^</b>
+               <i class="fa fa-search"></i>
+            </button>
+          </div>
+       </div>
+         
+        <div>
+          <a href="./signin.html">SignIn</a>
+        <a href="">Contact Us</a>
+        <a href="">Cart</a>
+        </div>
+        
+      </div>
+      <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+      <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+      </div>
+    </body>
+    <script>
+      // Write all necessery JS here 
+      let product = document.getElementById("cart-container")
+      let total = document.getElementById("cart-total")
+      let cart = JSON.parse(localStorage.getItem("cart")) || []
+      let sum = 0;
+      display(cart)
+      function display(data){
+        product.innerHTML=""
+        data.forEach(function(e,ind){
+         // console.log(e)
+          let div = document.createElement("div")
+          let img = document.createElement("img")
+          let brand = document.createElement("h3")
+          let price = document.createElement("h3")
+          let des = document.createElement("p")
+          let cat = document.createElement("p")
+          let button = document.createElement("button")
+          let increment = document.createElement("button")
+          let decrement = document.createElement("button")
+          let quantity = document.createElement("span")
+  
+          img.setAttribute("src",e.img)
+          brand.innerText = e.title
+          price.innerText = e.price
+          des.innerText = e.rom
+          cat.innerText = e.display
+          increment.innerText = "+"
+          decrement.innerText = "-"
+          quantity.innerText = e.quantity
+          button.innerText = "Remove"
+          sum += quantity.innerText*e.price
+          total.innerText=sum
+  
+          div.append(img,brand,price,des,cat,increment,quantity,decrement,button)
+          product.append(div)
+  
+          increment.addEventListener("click",function(){
+            e.quantity++
+            sum += e.price
+            total.innerText=sum
+          })
+          decrement.addEventListener("click",function(){
+            e.quantity--
+            sum -= e.price
+            total.innerText=sum
+          })
+  
+          button.addEventListener("click",function(){
+            //sum -=quantity.innerText*e.price
+            //total.innerText=sum
+            cart.splice(ind,1)
+            localStorage.setItem("cart",JSON.stringify(cart))
+            sum=0
+            display(cart)
+          })
+         
+          
+          //  console.log(sum)
+          
+           
+  
+        })
+      }
+    </script>
+  </html>
+  
