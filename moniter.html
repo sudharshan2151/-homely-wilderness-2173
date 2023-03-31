@@ -106,111 +106,6 @@ select::-ms-expand {
 
 
 /* CSS */
-#sale{
-  display: flex;
-  background-image: linear-gradient(135deg, #ed95b2 40%, #efb89b);
-  font-size: 30px;
-  justify-content: center;
-  gap:20px;
-  position: sticky;
-top: 0;
-z-index: 1; 
-
-}
-#sale>div{
-  margin: 20px;
-}
-#countdown {
-  
-  color: #ef3030;
-  
-  
-}
-/* Styles for screens with width up to 768px */
-@media screen and (max-width: 768px) {
-  #product {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  #product>div {
-    padding: 10px;
-  }
-  #product p {
-    font-size: 20px;
-  }
-  #product h3 {
-    font-size: 28px;
-  }
-  #product h2 {
-    font-size: 30px;
-  }
-  #filter {
-    width: 100%;
-  }
-}
-#footer{
-    background-color: rgb(241, 235, 235);
-    padding: 30px;
-    font-size: 20px;
-  }
-  .nyc{
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    
-  }
-  .hi{
-    width: 90%;
-    display: flex;
-    gap:30px;
-    margin: auto;
-  }
-
-/* Styles for screens with width between 768px and 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  #product {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-  }
-  #product>div {
-    padding: 15px;
-  }
-  #product p {
-    font-size: 22px;
-  }
-  #product h3 {
-    font-size: 30px;
-  }
-  #product h2 {
-    font-size: 32px;
-  }
-  #filter {
-    width: 80%;
-  }
-}
-
-/* Styles for screens with width above 1024px */
-@media screen and (min-width: 1024px) {
-  #product {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  #product>div {
-    padding: 20px;
-  }
-  #product p {
-    font-size: 25px;
-  }
-  #product h3 {
-    font-size: 32px;
-  }
-  #product h2 {
-    font-size: 35px;
-  }
-  
-}
-
-
 
 
 </style>
@@ -227,16 +122,11 @@ z-index: 1;
        </div>
          
         <div>
-          <a href="./signin.html">signIn</a>
-        <a href="">contact Us</a>
-        <a href="./cart.html">cart</a>
+          <a href="./signin.html">SignIn</a>
+        <a href="">Contact Us</a>
+        <a href="./cart.html">Cart</a>
         </div>
         
-      </div>
-      <div id="sale">
-        <div><p>Don’t miss out on our EOFY sale and lowest prices. Also, get instant discounts on UPI/Netbanking & No Cost EMI</p></div>
-        
-        <h2 id = "countdown"></h2>
       </div>
     <select id="filter" placeholder="sort by price">
         <option value="">select price</option>
@@ -246,114 +136,8 @@ z-index: 1;
     <div id="product">
 
     </div>
-    <div id="footer">
-      <div class="nyc">
-          <div>
-              <p>IN/EN</p>
-              <p>Site Map</p>
-          </div>
-          <div>
-             <h3>Account</h3>
-              <p>My Account</p>
-              <p>Order Status</p>
-              <p>My Products</p>
-          </div>
-          <div>
-              <h3>Support</h3>
-              <p>Support Home</p>
-              <p>Contact Support</p>
-            
-          </div>
-          <div>
-              <h3>Connect with Us</h3>
-              <p>Community</p>
-              <p>Contact Us</p>
-              
-          </div>
-      </div>
-      <div class="nyc">
-          <div>
-              <h3>Our Offerings</h3>
-              <p>APEX</p>
-              <p>Products</p>
-              <p>Solutions</p>
-              <p>Services</p>
-              <p>Deals</p>
-          </div>
-          <div>
-             <h3>Our Company</h3>
-              <p>Who We Are</p>
-              <p>Careers</p>
-              <p>Dell Technologies Capital</p>
-              <p>Investors</p>
-              <p>Newsroom</p>
-              <p>Perpectives</p>
-              
-
-          </div>
-          <div>
-              <h3>Our Partners</h3>
-              <p>Find a Partner</p>
-              <p>OEM Solutions</p>
-              <p>Partner Program</p>
-            
-          </div>
-          <div>
-              <h3>Resources</h3>
-              <p>Blog</p>
-              <p>Events</p>
-              <p>Dell Learning Centre</p>
-              <p>Glossary
-              </p>
-              <p>Privacy Centre</p>
-              <p>Resource Library</p>
-              <p>Trial Software Downloads</p>
-
-              
-          </div>
-      </div>
-      <div class="hi">
-          <h3>Dell Technologies
-          </h3>
-          <h3>Premier</h3>
-      </div>
-      <div class="hi">
-          <p>Copyright @ 2023 Dell Inc</p>
-          <p>Terms fo Sale</p>
-          <p>Privacy Statement</p>
-          <p>Legal & Regulatory</p>
-      </div>
-  </div>
 </body>
 <script>
- 
-const hours = 16;
-const minutes = 30;
-const seconds = 0;
-let duration = (hours * 60 * 60 + minutes * 60 + seconds) * 1000; 
-
-const countdownDiv = document.getElementById("countdown");
-
-
-const timer = setInterval(() => {
-  
-  const hoursLeft = Math.floor(duration / (1000 * 60 * 60));
-  const minutesLeft = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
-  const secondsLeft = Math.floor((duration % (1000 * 60)) / 1000);
-
-  
-  countdownDiv.textContent = `${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
-
- 
-  duration -= 1000;
-
-  
-  if (duration < 0) {
-    clearInterval(timer);
-    countdownDiv.textContent = "Timer expired!";
-  }
-}, 1000);
-
   let img = document.getElementById("logo")
 
 img.addEventListener("click",function(){
@@ -361,9 +145,9 @@ img.addEventListener("click",function(){
 })
     let product=document.getElementById("product")
     let filter = document.getElementById("filter")
-    let data = JSON.parse(localStorage.getItem("data")) || []
+    let data = JSON.parse(localStorage.getItem("monitor")) || []
     display(data)
-    console.log(data)
+    //console.log(data)
 
     filter.addEventListener("change",function(){
       if(filter.value==""){
@@ -375,9 +159,7 @@ img.addEventListener("click",function(){
 
         if(filter.value=="low to high"){
          ar.sort(function(a,b){
-         
-
-          return a.price-b.pirce
+          return a.price - b.price
          })
       
        
@@ -386,10 +168,7 @@ img.addEventListener("click",function(){
       
         ar.sort(function(a,b){
           return b.price - a.price
-
          })
-      
-       
       }
       display(ar)
       console.log(ar)
@@ -426,7 +205,7 @@ img.addEventListener("click",function(){
             display.innerText = ` ${e.processor}`
             button.innerText = "Add To Cart"
             div.append(img,title,price,pro,window,int,ram,rom,display,button)
-            //console.log(div)
+            console.log(div)
               product.append(div)
             button.addEventListener("click",function(){
          if(cart.includes(e)){

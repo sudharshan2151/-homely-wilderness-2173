@@ -20,6 +20,8 @@
         width: 50%;
         text-align: center;
         background-color: rgb(245, 244, 244);
+        padding: 30px;
+        
     }
     #second>img{
         text-align: center;
@@ -116,6 +118,52 @@ button[type="submit"] {
     }
     }
 
+
+/* CSS */
+/* <!-- HTML !-->
+<button class="button-63" role="button">Button 63</button> */
+
+/* CSS */
+.button-63 {
+  width: 40%;
+  align-items: center;
+  background-color: #4CAF50;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin:auto;
+}
+
+.button-63:active,
+.button-63:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-63 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
 </style>
 <body>
    <div id = "first">
@@ -134,7 +182,9 @@ button[type="submit"] {
               <button type="submit" >Sign In</button>
             </form>
           </div>
-          
+          <button class="button-63" role="button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EBzHPWH615GaaxMqJz8cJJuPvSQfeoKLnw&usqp=CAU" width="30" />Create an Account
+        </button>
     </div>
     <div id = "second">
         <p style="font-size: 50px;color:black">Dell Account Benefits</p>
@@ -161,7 +211,15 @@ button[type="submit"] {
 </div>
 
 </body>
-<script src="img.js">
+<script >
+ let img = document.getElementById("logo")
 
+img.addEventListener("click",function(){
+    window.location.href="index.html"
+})
+let button = document.querySelector(".button-63")
+button.addEventListener("click",function(){
+  window.location.href="newaccount.html"
+})
 </script>
 </html>
