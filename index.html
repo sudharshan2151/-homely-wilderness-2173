@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vast Systems</title>
 </head>
 <style>
     *{
         box-sizing: border-box;
+       
     }
     
     body{
+      user-select: none;
         margin: 0px;
         padding:0px;
+        
+
 
     }
     a{
@@ -37,6 +41,7 @@
   z-index: 1; 
         margin: auto;
         background-color: white;
+        /* background-image: linear-gradient(135deg, #e7145b 40%, #fc894d); */
        
        
     }
@@ -50,7 +55,7 @@
 
 .searchTerm {
   width: 100%;
-  height: 80px;
+  height: 50px;
   border: 3px solid #00B4CC;
   border-right: none;
   padding: 5px;
@@ -65,7 +70,7 @@
 
 .searchButton {
   width: 19%;
-  height: 80px;
+  height: 50px;
   border: 1px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -172,9 +177,13 @@
     display: flex;
     justify-content: center;
     background-color: rgb(234, 234, 234);
-    gap:30px;
+    /* gap:30px; */
     padding: 20px;
     
+  }
+  #mid img{
+    width: 100px;
+  
   }
   
   #mid1>img{
@@ -203,6 +212,29 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  #explore1{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+  }
+  #explore1>div{
+    width: 90%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+
+  }
+  #explore1 img{
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+  }
   #explore{
     width: 90%;
     display: grid;
@@ -212,13 +244,13 @@
     font-size: 20px;
     text-align: center;
   }
-  
   #explore>div{
     width: 90%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         background-color: black;
         color: white;
-        
+        font-size: 30px;
+
   }
   #explore>img{
     width: 100%;
@@ -372,9 +404,10 @@
      </div>
        
       <div>
-        <a href="./signin.html">SignIn</a>
-      <a href="">Contact Us</a>
-      <a href="">Cart</a>
+        <a href="./signin.html">signIn</a>
+      <a href="product.html">contact us</a>
+      <a href="cart.html">cart</a>
+      <a href="moniter.html">product</a>
       </div>
       
     </div>
@@ -391,10 +424,10 @@
     <div class="dropdown">
         <a href="">PRODUCT</a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href="product.html">All Products</a>
+        <a href="cart.html">cart</a>
+        <a href="moniter.html">moniter</a>
+        <a href="laptop.html">Laptop</a>
     </div>
     </div>
     <div class="dropdown">
@@ -416,7 +449,7 @@
     </div>
     </div>
     <div class="dropdown">
-        <a href="">SUPPORT</a>
+        <a href="">DEALS</a>
     <div class="menu">
         <a href="">ddd</a>
         <a href="">dfds</a>
@@ -437,27 +470,30 @@
 </div>
       
        </div>
-       <div id="mid">
+       <div id="hea">
+        <p>Browsing Popular Categories</p>
+       </div>
+       <div id="explore1">
+          <!-- <div>
+          <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-278@2x.png" alt="">
+            <h3>printers</h3>
+          </div> -->
           <div>
-          <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
-            <h3>Moniter</h3>
+            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-279@2x.png" alt="">
+            <p>Pc</p>
           </div>
           <div>
+            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-277@2x.png" alt="">
+            <p>Monitors and Accessories</p>
+          </div>
+          <div>
+            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Group-6679@2x.jpg" alt="">
+            <p>Moniter</p>
+          </div>
+          <!-- <div>
             <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
             <h3>Moniter</h3>
-          </div>
-          <div>
-            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
-            <h3>Moniter</h3>
-          </div>
-          <div>
-            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
-            <h3>Moniter</h3>
-          </div>
-          <div>
-            <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
-            <h3>Moniter</h3>
-          </div>
+          </div> -->
        </div>
        <div id ="mid1">
         <div>
@@ -477,16 +513,16 @@
       
        <div id="explore">
         <div>
-                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0302-innovationindex-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0330-security-pov-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
             <p>Thought Leadership Innovation Index</p>
         </div>
         <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0316-apex-sustainability-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
-            <p>Thought Leadership Innovation Index</p>
+            <img src="https://i.dell.com/is/image/Dellcontent/content/dam/ss2/product-images/page/uber/0330-dtw-entertainment-solutions-703x423.png/?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p>Live Entertained Announced</p>
          </div>
         <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0302-dtw23-withlogo-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
-            <p>Thought Leadership Innovation Index</p>
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0302-innovationindex-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p>Zero Trust:Hope beyond Hype</p>
         </div>
        </div>
     <div id = "server">
