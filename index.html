@@ -16,6 +16,7 @@
       user-select: none;
         margin: 0px;
         padding:0px;
+       
         
 
 
@@ -46,14 +47,22 @@
        
     }
     .search {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
+
+      width: 100%;
+  /* position: relative;
+  display: flex; */
+  /* border: 3px solid red; */
  
 }
+.search img{
+  width: 90%;
+  border-radius: 10px;
+  
 
-.searchTerm {
+
+}
+
+/* .searchTerm {
   width: 100%;
   height: 50px;
   border: 3px solid #00B4CC;
@@ -62,13 +71,13 @@
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-}
+} */
 
-.searchTerm:focus{
+/* .searchTerm:focus{
   color: #00B4CC;
-}
+} */
 
-.searchButton {
+/* .searchButton {
   width: 19%;
   height: 50px;
   border: 1px solid #00B4CC;
@@ -78,7 +87,7 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
-}
+} */
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
@@ -90,30 +99,49 @@
 }
    
     #navbar img{
-     height: 70px;
+     height: 60px;
     }
     #navbar>div:nth-child(3){
       width: 30%;
-     display: block;
+     /* display: block; */
      display: flex;
      justify-content: space-around;
+     
+     font-family:Arial, Helvetica, sans-serif;
+     
     
       
     }
-    #navbar>div>a{
+    #navbar>div>button{
+      text-align: center;
       font-family:Arial, Helvetica, sans-serif;
-      border: 3px solid rgb(6, 130, 158);
-      background-color: rgb(6, 130, 158) ;
-      color: white;
+      border:none;
+      background-color: white;
+      color: rgb(25, 7, 7);
       border-radius: 10px;
       padding: 10px;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
       
     }
-    #navbar a:hover{
-      background-color: white;
+    #navbar button:hover{
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       color: black;
     }
    
+    #navbar>div>button img{
+      text-align: center;
+      font-family:Arial, Helvetica, sans-serif;
+      border:none;
+      background-color: white;
+      color: rgb(25, 7, 7);
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 25px;
+      
+    }
+
    a{
     text-decoration: none;
     font-size: 30px;
@@ -131,12 +159,16 @@
   .dropdown{
     position: relative;
     cursor: pointer;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black
   }
   .dropdown > a{
     display: flex;
     align-items: center;
     gap: 3px;
    height: 72px;
+   
   }
   
   .dropdown:hover .menu{
@@ -146,7 +178,8 @@
   .menu>a{
     font-size:30px;
     padding:12px 20px;
-
+    color: black;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .menu > a:hover{
     background-color:rgb(164, 163, 163);
@@ -215,25 +248,42 @@
   #explore1{
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:15px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
     margin: auto;
     font-size: 20px;
     text-align: center;
+    /* position: sticky;
+    background-color: white;
+  top: 0;
+  z-index: 1;  */
   }
   #explore1>div{
-    width: 90%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color: black;
-        color: white;
+    width: 70%;
+   
+      text-align: center;
         font-size: 30px;
+        margin: auto;
+        margin-top: 30px;
+
 
   }
-  #explore1 img{
+  #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  #explore1>div:nth-child(2){
     width: 100%;
-  
-    display: flex;
-    justify-content: center;
+    
+      text-align: center;
+        font-size: 30px;
+        margin: auto;
+       
+  }
+  #explore1 img{
+    width: 50%;
+
+    text-align: center;
+    margin: auto;
   }
   #explore{
     width: 90%;
@@ -252,7 +302,7 @@
         font-size: 30px;
 
   }
-  #explore>img{
+  #explore img{
     width: 100%;
   
     display: flex;
@@ -373,10 +423,43 @@
     margin: auto;
   }
   
+ 
+#ser{
+  display:flex;flex-direction: column;align-items: center;justify-content:center;margin-top: 20px;background-color: rgb(246, 247, 247);padding:50px
+}
+#constant button{
+  height: 50px;
+    width: 200px;
+    right: 10px;
+    bottom:10px;
+    padding:30px;
+   font-size: 25px;
+   background-color: rgb(91, 38, 224);
+   position: fixed;
+   color:white;
+   text-align: center;
+}
+@media screen and (max-width:800px) {
+  .search{
+   visibility: hidden;
 
-
+  }
+  .cartin{
+   visibility: hidden;
+  }
+  .con{
+   visibility: hidden;
+  }
+  #navbar button:hover{
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      color: black;
+    }
+}
 </style>
 <body>
+  <div id="constant">
+    <button >Contact</button></h1>
+   </div>
     <!-- <nav id = "navbar">
         <img src="./images/Systems and technology programming company logo.png" alt="" id = "logo">
         <a href="./index.html"></a>
@@ -396,18 +479,24 @@
       <img src="./images/Systems and technology programming company logo1.png" alt="" id="logo">
       <div class="wrap">
         <div class="search">
-           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <!-- <input type="text" class="searchTerm" placeholder="What are you looking for?">
            <button type="submit" class="searchButton"><b>^</b>
              <i class="fa fa-search"></i>
-          </button>
+          </button> -->
+          <!-- <img src="https://templatefor.net/wp-content/uploads/2018/11/Search-Bar-Solution-600x336.jpg" alt=""> -->
+          <img src="images/Screenshot 2023-04-01 134432.png" alt="">
         </div>
+        <!-- <img src="https://templatefor.net/wp-content/uploads/2018/11/Search-Bar-Solution-600x336.jpg" alt=""> -->
      </div>
        
-      <div>
-        <a href="./signin.html">signIn</a>
+      <div >
+        <!-- <a href="./signin.html">signIn</a>
       <a href="product.html">contact us</a>
-      <a href="cart.html">cart</a>
-      <a href="moniter.html">product</a>
+      <a href="cart.html">cart</a> -->
+      <button class = "sign"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQOOP28liF97NHZdE_iOEW2GLc18V5d792Wh6GfOSOBpiMnnv2I" alt="">Sign In</button>
+      <button class = "con"><img src="https://media.istockphoto.com/id/1414774542/vector/headphones-icon.jpg?b=1&s=170667a&w=0&k=20&c=_8xySkEAD1AJPXW17i_z50pjuczw1nJFMHaz-fM3lI4=" alt="">Contact Us</button>
+      <button class = "cartin"><img src="https://th.bing.com/th?q=Grocery+Cart+Icon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="">Cart</button>
+     
       </div>
       
     </div>
@@ -415,85 +504,84 @@
       <div class="dropdown">
         <a href="">APEX</a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href="">ALL APEX</a>
+        <a href="">Compute </a>
+        <a href="">Storage</a>
+        <a href="">Resources</a>
     </div>
     </div>
     <div class="dropdown">
         <a href="">PRODUCT</a>
     <div class="menu">
-        <a href="product.html">All Products</a>
+        <a href="product.html">Products</a>
         <a href="cart.html">cart</a>
         <a href="moniter.html">moniter</a>
-        <a href="laptop.html">Laptop</a>
+        <a href="accesories.html">Laptop</a>
     </div>
     </div>
     <div class="dropdown">
         <a href="">SOLUTIONS</a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href="">Cloud</a>
+        <a href="">DevOps</a>
+        <a href="">Industry</a>
+        <a href="">OEM</a>
     </div>
     </div>
     <div class="dropdown">
         <a href="">SUPPORT</a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href="">Home</a>
+        <a href="">Library</a>
+        <a href="">Drives </a>
+        <a href="">Order </a>
     </div>
     </div>
     <div class="dropdown">
         <a href="">DEALS</a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href=""></a>
+        <a href="">Laptop</a>
+        <a href="">Desktop</a>
+        <a href="">XPS</a>
     </div>
     </div>
     <div class="dropdown">
         <a href=""></a>
     <div class="menu">
-        <a href="">ddd</a>
-        <a href="">dfds</a>
-        <a href="">dfsdf</a>
-        <a href="">sdfs</a>
+        <a href="">Employee Discounts</a>
+        <a href="">Student </a>
+        <a href="">Server</a>
+        <a href="">Storage</a>
     </div>
     </div>
     </div>
 </div>
       
        </div>
-       <div id="hea">
-        <p>Browsing Popular Categories</p>
-       </div>
+       
        <div id="explore1">
-          <!-- <div>
-          <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-278@2x.png" alt="">
-            <h3>printers</h3>
-          </div> -->
-          <div>
-            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-279@2x.png" alt="">
-            <p>Pc</p>
+          
+          <div class ="desktop">
+            <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/s2722qc---300x300.png" alt="">
+            <p>Desktops</p>
           </div>
-          <div>
-            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-277@2x.png" alt="">
-            <p>Monitors and Accessories</p>
+          <div  class ="Laptop">
+            <img src="https://i.dell.com/sites/csimages/UberHomePage_Imagery/all/xpss.png" alt="">
+            <p>Laptops</p>
           </div>
-          <div>
-            <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Group-6679@2x.jpg" alt="">
-            <p>Moniter</p>
+          <div  class ="accessories">
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/snp-home-page/wb7022-cwc-10-bk-319x319.png?fmt=png-alpha&amp;wid=300&amp;hei=300" alt="">
+            <p>PC Accessories </p>
           </div>
           <!-- <div>
             <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
             <h3>Moniter</h3>
           </div> -->
+          <div>
+            <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/aw3423dw,-aw920h-and-aw610m---300x300.png" alt="">
+            <p>Gaming Accessories </p>
+          </div>
        </div>
        <div id ="mid1">
         <div>
@@ -599,7 +687,7 @@
         </div>
        
     </div>
-    <div style="display:flex;flex-direction: column;align-items: center;justify-content:center;margin-top: 20px;background-color: rgb(246, 247, 247);padding:50px">
+    <div  id="ser">
         <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="" style="width:100px">
         <P style="font-size: 40px;">Give Your Device A Second Life</P>
         <p style="font-size: 30px;">Recycling your old tech helps us create responsible solutions.</p>
@@ -783,5 +871,33 @@
         </div>
     </div>
 </body>
-<script src="img.js"></script>
+<script >
+  let img = document.getElementById("logo")
+
+img.addEventListener("click",function(){
+    window.location.href="index.html"
+})
+let sign = document.querySelector(".sign")
+let cart = document.querySelector(".cartin")
+let des = document.querySelector(".desktop")
+let acc = document.querySelector(".accessories")
+let lap = document.querySelector(".Laptop")
+des.addEventListener("click",function(){
+  window.location.href="moniter.html"
+})
+acc.addEventListener("click",function(){
+  window.location.href="accesories.html"
+})
+sign.addEventListener("click",function(){
+  window.location.href="signin.html"
+})
+cart.addEventListener("click",function(){
+  window.location.href="cart.html"
+
+})
+lap.addEventListener("click",function(){
+  window.location.href="product.html"
+
+})
+</script>
 </html>

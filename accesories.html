@@ -15,10 +15,11 @@
   #product{
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    
+    
     gap:20px;
-
+    margin: 20px;
 
   }
   #product>div{
@@ -175,9 +176,9 @@ z-index: 1;
   #product>div {
     padding: 15px;
   }
-  #product p {
+  /* #product p {
     font-size: 22px;
-  }
+  } */
   #product h3 {
     font-size: 30px;
   }
@@ -361,7 +362,7 @@ img.addEventListener("click",function(){
 })
     let product=document.getElementById("product")
     let filter = document.getElementById("filter")
-    let data = JSON.parse(localStorage.getItem("data")) || []
+    let data = JSON.parse(localStorage.getItem("accesories")) || []
     display(data)
     console.log(data)
 
@@ -375,7 +376,9 @@ img.addEventListener("click",function(){
 
         if(filter.value=="low to high"){
          ar.sort(function(a,b){
-          return a.price - b.pirce
+         
+
+          return a.price-b.pirce
          })
       
        
@@ -414,16 +417,13 @@ img.addEventListener("click",function(){
             let button = document.createElement("button")
 
             title.innerText = e.title
+            window.innerText="(Manufacturer Part FDR0X Dell Part 210-BFOX)"
+            window.style.color="grey"
             price.innerText = `₹${e.price}`
-            pro.innerText = e.processor
-            //console.log(pro)
-            window.innerText = `${e.window}`
-            int.innerText =`${e.inte}`
-            ram.innerText = ` ${e.ram}`
-            rom.innerText = ` ${e.processor}`
-            display.innerText = ` ${e.processor}`
+            rom.innerText = "(Click Buy Now to shop this product on Dellstore.com (Dell Assured))"
+            rom.style.color="grey"
             button.innerText = "Add To Cart"
-            div.append(img,title,price,pro,window,int,ram,rom,display,button)
+            div.append(img,title,window,price,rom,button)
             //console.log(div)
               product.append(div)
             button.addEventListener("click",function(){

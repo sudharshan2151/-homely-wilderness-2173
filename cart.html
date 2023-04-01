@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="navbar.css">
 </head>
 <style>
-    #cart-container{
+    /* #cart-container{
       display: grid;
       grid-template-columns: repeat(1,1fr);
       gap:20px;
@@ -18,6 +18,14 @@
       font-weight: Roboto,sans-serif;
      
       color:white
+    } */
+    body{
+      margin: 0px;
+      padding:0px;
+      background-image: linear-gradient(135deg, #a0e8a6 40%, #f5b08a);
+    }
+    h1{
+      text-align: center;
     }
     #cart-container>div{
       text-align: center;
@@ -66,8 +74,7 @@
     background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     display: block;
-    height: 50px;
-    width: 200px;
+    
     background: #00b7ea;
     
     /*TYPE*/
@@ -80,9 +87,15 @@
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    gap:30px
-
-  
+    gap:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #total{
+    padding: 30px;
+    
+    display: flex;
   }
    
   
@@ -143,6 +156,54 @@
     }
   }
   
+  table,th,td{
+    
+    font-size: 30px;
+    border: none;
+    gap: 30px;
+   
+    
+  }
+  table{
+    width: 90%;
+    margin: auto;
+  }
+  table img{
+    width: 50%;
+  }
+  #tota1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap:20px;
+    background-color: rgb(236, 234, 234);
+    align-items: center;
+  }
+  #tota1>div button{
+height: 50px;
+    width: 200px;
+    padding:30px;
+   font-size: 25px;
+   background-color: rgb(38, 224, 38);
+  }
+  
+  #footer{
+    background-color: rgb(241, 235, 235);
+    padding: 30px;
+    font-size: 20px;
+  }
+  .nyc{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    
+  }
+  .hi{
+    width: 90%;
+    display: flex;
+    gap:30px;
+    margin: auto;
+  }
   
   </style>
 <body>
@@ -164,13 +225,115 @@
         </div>
         
       </div>
-      <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
-      <div id="cart-container">
-        <!-- Here Append All the cart Products  -->
+      <h1>Cart</h1>
+      <div id="tota1">
+        <div>
+     <h1 id="total">Subtotal is:- <span id="cart-total">0</span>
+     
+     </div>
+     <div id="constant">
+     <button >Checkout</button></h1>
+    </div>
+    </div>
+      <table id="myTable">
+        <thead>
+          <th>item</th>
+          <th>Name</th>
+          <th>quantity</th>
+          <th>Inc/dec</th>
+          <th>price</th>
+         
+          
+        </thead>
+        <hr>
+        <tbody id="cart-container">
+         
+        </tbody>
+      </table>
+     
+    <div id="footer">
+      <div class="nyc">
+          <div>
+              <p>IN/EN</p>
+              <p>Site Map</p>
+          </div>
+          <div>
+             <h3>Account</h3>
+              <p>My Account</p>
+              <p>Order Status</p>
+              <p>My Products</p>
+          </div>
+          <div>
+              <h3>Support</h3>
+              <p>Support Home</p>
+              <p>Contact Support</p>
+            
+          </div>
+          <div>
+              <h3>Connect with Us</h3>
+              <p>Community</p>
+              <p>Contact Us</p>
+              
+          </div>
       </div>
+      <div class="nyc">
+          <div>
+              <h3>Our Offerings</h3>
+              <p>APEX</p>
+              <p>Products</p>
+              <p>Solutions</p>
+              <p>Services</p>
+              <p>Deals</p>
+          </div>
+          <div>
+             <h3>Our Company</h3>
+              <p>Who We Are</p>
+              <p>Careers</p>
+              <p>Dell Technologies Capital</p>
+              <p>Investors</p>
+              <p>Newsroom</p>
+              <p>Perpectives</p>
+              
+
+          </div>
+          <div>
+              <h3>Our Partners</h3>
+              <p>Find a Partner</p>
+              <p>OEM Solutions</p>
+              <p>Partner Program</p>
+            
+          </div>
+          <div>
+              <h3>Resources</h3>
+              <p>Blog</p>
+              <p>Events</p>
+              <p>Dell Learning Centre</p>
+              <p>Glossary
+              </p>
+              <p>Privacy Centre</p>
+              <p>Resource Library</p>
+              <p>Trial Software Downloads</p>
+
+              
+          </div>
+      </div>
+      <div class="hi">
+          <h3>Dell Technologies
+          </h3>
+          <h3>Premier</h3>
+      </div>
+      <div class="hi">
+          <p>Copyright @ 2023 Dell Inc</p>
+          <p>Terms fo Sale</p>
+          <p>Privacy Statement</p>
+          <p>Legal & Regulatory</p>
+      </div>
+  </div>
     </body>
     <script>
       // Write all necessery JS here 
+      var table = document.getElementById("myTable");
+
       let product = document.getElementById("cart-container")
       let total = document.getElementById("cart-total")
       let cart = JSON.parse(localStorage.getItem("cart")) || []
@@ -180,56 +343,89 @@
         product.innerHTML=""
         data.forEach(function(e,ind){
          // console.log(e)
-          let div = document.createElement("div")
-          let img = document.createElement("img")
-          let brand = document.createElement("h3")
-          let price = document.createElement("h3")
-          let des = document.createElement("p")
-          let cat = document.createElement("p")
+          let div = document.createElement("tr")
+          let img = document.createElement("td")
+          let brand = document.createElement("td")
+          let price = document.createElement("td")
+          
           let button = document.createElement("button")
           let increment = document.createElement("button")
           let decrement = document.createElement("button")
-          let quantity = document.createElement("span")
-  
-          img.setAttribute("src",e.img)
+          let quantity = document.createElement("td")
+          let incdec = document.createElement("td")
+          let img1 = document.createElement("img")
+
+          img1.setAttribute("src",e.img)
+          img.append(img1)
           brand.innerText = e.title
-          price.innerText = e.price
-          des.innerText = e.rom
-          cat.innerText = e.display
+          price.innerText = `₹${e.price}`
+          quantity.innerText = e.quantity
           increment.innerText = "+"
           decrement.innerText = "-"
-          quantity.innerText = e.quantity
+         incdec.append(increment,decrement)
+          
           button.innerText = "Remove"
           sum += quantity.innerText*e.price
-          total.innerText=sum
+          total.innerText=`₹${sum}`
+
+// Set styles for the button and its parent cell
+
+
+
+
+//
+
+div.append(img, brand, quantity,incdec, price);
+product.append(div);
+
+//
+
+       
   
-          div.append(img,brand,price,des,cat,increment,quantity,decrement,button)
-          product.append(div)
-  
-          increment.addEventListener("click",function(){
+        //   div.append(img,brand,quantity,price,button)
+        //   product.append(div)
+         // console.log(div,produ
+          
+         increment.addEventListener("click",function(){
             e.quantity++
             sum += e.price
-            total.innerText=sum
+            total.innerText=`₹${sum}`
             display(cart)
 
           })
           decrement.addEventListener("click",function(){
             e.quantity--
+            if(e.quantity==0){
+              cart.splice(ind,1)
+            localStorage.setItem("cart",JSON.stringify(cart))
+            sum=0
+            display(cart)
+            }
             sum -= e.price
-            total.innerText=sum
+            total.innerText=`₹${sum}`
             display(cart)
           })
   
           button.addEventListener("click",function(){
             //sum -=quantity.innerText*e.price
-            //total.innerText=sum
+            //total.innerText=`₹${sum}`
             cart.splice(ind,1)
             localStorage.setItem("cart",JSON.stringify(cart))
             sum=0
             display(cart)
           })
          
-          
+          var table = document.getElementById("myTable");
+
+for (var i = 1; i < table.rows.length; i++) {
+  for (var j = 0; j < table.rows[i].cells.length; j++) {
+    
+    table.rows[i].cells[j].style.flexDirection="column"
+    table.rows[i].cells[j].style.justifyContent="center"
+    table.rows[i].cells[j].style.textAlign = "center";
+  }
+}
+
           //  console.log(sum)
           
            

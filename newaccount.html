@@ -5,17 +5,99 @@
 	<title>Laptop Company Registration</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
+<style>
+body {
+     user-select:none ;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0; 
+    background-image: url(https://wallpapertag.com/wallpaper/full/b/9/6/350851-download-free-website-background-1920x1080-for-mobile-hd.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+form {
+margin-right: 35%;
+margin-left: 35%;
+width: 25%;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+background-color: white;
+color:black;
+margin-top: 150px;
+padding: 50px;
+padding-top: 100px;
+padding-bottom: 100px;
+font-weight: bold;
+}
+.form-container {
+	width: 400px;
+	margin:  auto;
+	padding: 50px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #ccc;
+	opacity: 2;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.input-group {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-size: 16px;
+	
+	margin-bottom: 10px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	height: 60px;
+	border-radius: 10px;
+	border: 2px solid #a29d9d;
+	box-sizing: border-box;
+	margin: auto;
+	
+}
+
+button[type=submit] {
+	background-color: #4ca5af;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 30px;
+	height: 60px;
+	margin: auto;
+
+}
+
+button[type=submit]:hover {
+	background-color: #09707e;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+	.form-container {
+		width: 50%;
+	}
+}
+
+</style>
 <body>
 	<form action="#" method="POST">
-		<h1><center>Registration</center></h1>
-		<div class="input-group">
-			<label for="company-name">Company Name:</label>
-			<input type="text" id="company-name" name="company-name" required>
-		</div>
-		<div class="input-group">
-			<label for="contact-name">Contact Name:</label>
-			<input type="text" id="contact-name" name="contact-name" required>
-		</div>
+		
 		<div class="input-group">
 			<label for="email">Email:</label>
 			<input type="email" id="email" name="email" required>
@@ -33,80 +115,8 @@
 		</div>
 	</form>
 
-	<script src="script.js"></script>
-</body>
-</html>
-<style>
-body {
-     user-select:none ;
-	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
-	margin: 0;
-	padding: 0;
-}
+	
 
-form {
-margin-right: 35%;
-margin-left: 35%;
-
-}
-.form-container {
-	width: 500px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px #ccc;
-}
-
-h1 {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-.input-group {
-	margin-bottom: 20px;
-}
-
-label {
-	display: block;
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-input[type=text], input[type=password], input[type=email] {
-	display: block;
-	width: 100%;
-	padding: 10px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-}
-
-button[type=submit] {
-	background-color: #4CAF50;
-	color: #fff;
-	padding: 10px 20px;
-	font-size: 16px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-button[type=submit]:hover {
-	background-color: #3e8e41;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-	.form-container {
-		width: 90%;
-	}
-}
-
-</style>
 <script>
 // Get the form element
 const form = document.querySelector('form');
@@ -192,3 +202,5 @@ function validateInput(companyName, contactName, email, password, confirmPasswor
 }
 
 </script>
+</body>
+</html>
