@@ -508,24 +508,23 @@ img.addEventListener("click",function(){
         display(data)
       }
       else{
-        let ar = [...data]
-        console.log(filter.value)
-
         if(filter.value=="low to high"){
-         ar.sort(function(a,b){
-          return a.price - b.pirce
-         })
-      
+          let ar = [...data]
+          console.log("HI")
+          ar.sort((a, b) => a.price - b.price);
+      display(ar)
        
       }
       else{
-      
+        let ar = [...data]
         ar.sort(function(a,b){
           return b.price - a.price
 
          })
       
-       
+         display(ar)
+      
+     
       }
       display(ar)
       console.log(ar)
