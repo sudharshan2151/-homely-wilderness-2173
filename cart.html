@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="navbar.css">
 </head>
 <style>
@@ -145,17 +145,6 @@
     opacity: .75;
   }
   
-  @media screen and (max-width: 991px) {
-    button {
-      font-size: 15px;
-      height: 50px;
-    }
-  
-    button {
-      line-height: 50px;
-    }
-  }
-  
   table,th,td{
     
     font-size: 30px;
@@ -187,6 +176,31 @@ height: 50px;
    background-color: rgb(38, 224, 38);
   }
   
+  @media screen and (max-width: 991px) {
+    button {
+      font-size: 15px;
+      height: 50px;
+    }
+    .wrap, .cart, .contact{
+    display: none;
+  }
+    button {
+      line-height: 50px;
+    }
+    body{
+      background-color: white;
+      background-image: none;
+    }
+    table,th,td{
+    
+    font-size: 20px;
+    border: none;
+    gap: 30px;
+    }
+    
+  }
+  
+  
   #footer{
     background-color: rgb(241, 235, 235);
     padding: 30px;
@@ -205,6 +219,13 @@ height: 50px;
     margin: auto;
   }
   
+  @media screen and (max-width: 991px){
+    body{
+      background-color: white;
+      background-image: none;
+    }
+  }
+  
   </style>
 <body>
     <div id="navbar">
@@ -217,11 +238,13 @@ height: 50px;
             </button>
           </div>
        </div>
-         
+       <!-- .wrap, .cart, .contact{
+        display: none;
+      } -->
         <div>
           <a href="./signin.html">SignIn</a>
-        <a href="./product.html">Contact Us</a>
-        <a href="">Cart</a>
+        <a href="./product.html" class="contact">Contact Us</a>
+        <a href="" class="cart">Cart</a>
         </div>
         
       </div>
