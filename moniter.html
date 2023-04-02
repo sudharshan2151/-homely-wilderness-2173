@@ -21,22 +21,27 @@
 
 
   }
+  #product img{
+    width: 70%;
+
+  }
   #product>div{
+    width: 90%;
     text-align: center;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   #product p{
-    font-size: 25px;
+    font-size: 20px;
     
   }
   #product h3{
-    font-size :32px;
+    font-size :25px;
 
 
    }
   #product h2{
-    font-size: 35px;
+    font-size: 30px;
   }  */
   #filter{
     
@@ -103,9 +108,171 @@ select::-ms-expand {
   border-radius: 10px;
 
 } 
+#explore1{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    /* position: sticky;
+    background-color: white;
+  top: 0;
+  z-index: 1;  */
+  }
+  #explore1>div{
+    width: 70%;
+   
+      text-align: center;
+       font-size: 25px;
+        margin: auto;
+        margin-top: 30px;
 
+
+  }
+  #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  #explore1>div:nth-child(2){
+    width: 100%;
+    
+      text-align: center;
+       font-size: 25px;
+        margin: auto;
+       
+  }
+  #explore1 img{
+    width: 50%;
+
+    text-align: center;
+    margin: auto;
+  }
 
 /* CSS */
+@media screen and (max-width: 408px) {
+  #product {
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+  }
+  #product>div {
+    padding: 10px;
+  }
+  #product p {
+    font-size: 18px;
+  }
+  #product h3 {
+    font-size: 20px;
+  }
+  #product h2 {
+    font-size: 25px;
+  }
+  #filter {
+    width: 30%;
+  }
+  .wrap,.cart,.contact{
+    display: none;
+  }
+  #sale{
+    display: inline;
+    position:static;
+    text-align: center;
+  }
+  #navbar{
+    flex-direction: column;
+  }
+  #explore>div{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    #explore1{
+      grid-template-columns: repeat(1,1fr);
+    }
+    #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+}
+
+
+/* Styles for screens with width between 768px and 1024px */
+@media screen and (max-width: 868px) and (min-width: 409px)  {
+  #product {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  #product>div {
+    padding: 15px;
+  }
+  #product p {
+    font-size: 22px;
+  }
+  #product h3 {
+    font-size: 30px;
+  }
+  #product h2 {
+    font-size: 32px;
+  }
+  #filter {
+    width: 30%;
+  }
+  
+  .wrap,.cart,.contact{
+    display: none;
+  }
+  #sale{
+    display: inline;
+    position:static;
+    text-align: center;
+  }
+  #explore{
+      grid-template-columns: repeat(1,1fr);
+      
+    }
+    #explore>div{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    #explore1{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+}
+
+/* Styles for screens with width above 1024px */
+@media screen and (min-width: 1024px) {
+  #product {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  #product>div {
+    padding: 20px;
+  }
+  #product p {
+    font-size: 25px;
+  }
+  #product h3 {
+    font-size: 32px;
+  }
+  #product h2 {
+    font-size: 35px;
+  }
+  #explore{
+      grid-template-columns: repeat(1,1fr);
+      
+    }
+    #explore>div{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    #explore1{
+      grid-template-columns: repeat(4,1fr);
+    }
+    #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+}
+
 
 
 </style>
@@ -123,11 +290,34 @@ select::-ms-expand {
          
         <div>
           <a href="./signin.html">SignIn</a>
-        <a href="">Contact Us</a>
-        <a href="./cart.html">Cart</a>
+        <a href="" class="contact">Contact Us</a>
+        <a href="./cart.html" class="cart">Cart</a>
         </div>
         
       </div>
+      <div id="explore1">
+          
+        <div class ="desktop">
+          <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/s2722qc---300x300.png" alt="">
+          <p>Desktops</p>
+        </div>
+        <div  class ="Laptop">
+          <img src="https://i.dell.com/sites/csimages/UberHomePage_Imagery/all/xpss.png" alt="">
+          <p>Laptops</p>
+        </div>
+        <div  class ="accessories">
+          <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/snp-home-page/wb7022-cwc-10-bk-319x319.png?fmt=png-alpha&amp;wid=300&amp;hei=300" alt="">
+          <p>PC Accessories </p>
+        </div>
+        <!-- <div>
+          <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Laptop-3-icon.png" alt="">
+          <h3>Moniter</h3>
+        </div> -->
+        <div>
+          <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/aw3423dw,-aw920h-and-aw610m---300x300.png" alt="">
+          <p>Gaming Accessories </p>
+        </div>
+     </div>
     <select id="filter" placeholder="sort by price">
         <option value="">select price</option>
         <option value="low to high">low to high</option>
@@ -138,6 +328,22 @@ select::-ms-expand {
     </div>
 </body>
 <script>
+  let des = document.querySelector(".desktop")
+let acc = document.querySelector(".accessories")
+let lap = document.querySelector(".Laptop")
+des.addEventListener("click",function(){
+  window.location.href="moniter.html"
+})
+acc.addEventListener("click",function(){
+  window.location.href="accesories.html"
+})
+
+
+lap.addEventListener("click",function(){
+  window.location.href="product.html"
+
+})
+
   let img = document.getElementById("logo")
 
 img.addEventListener("click",function(){
@@ -154,25 +360,23 @@ img.addEventListener("click",function(){
         display(data)
       }
       else{
-        let ar = [...data]
-        console.log(filter.value)
-
         if(filter.value=="low to high"){
-         ar.sort(function(a,b){
-          return a.price - b.price
-         })
-      
+          let ar = [...data]
+          console.log("HI")
+          ar.sort((a, b) => a.price - b.price);
+      display(ar)
        
       }
       else{
-      
+        let ar = [...data]
         ar.sort(function(a,b){
           return b.price - a.price
+
          })
+      
+         display(ar)
       }
-      display(ar)
-      console.log(ar)
-      }
+    }
     })
     let cart = JSON.parse(localStorage.getItem("cart")) || []
 
@@ -201,10 +405,10 @@ img.addEventListener("click",function(){
             window.innerText = `${e.window}`
             int.innerText =`${e.inte}`
             ram.innerText = ` ${e.ram}`
-            rom.innerText = ` ${e.processor}`
+            rom.innerText = ` ${e.rom}`
             display.innerText = ` ${e.processor}`
             button.innerText = "Add To Cart"
-            div.append(img,title,price,pro,window,int,ram,rom,display,button)
+            div.append(img,title,price,pro,window,int,ram,rom,button)
             console.log(div)
               product.append(div)
             button.addEventListener("click",function(){

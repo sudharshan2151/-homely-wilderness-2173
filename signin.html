@@ -221,5 +221,19 @@ let button = document.querySelector(".button-63")
 button.addEventListener("click",function(){
   window.location.href="newaccount.html"
 })
+
+let us = document.querySelector("#username")
+let ps=document.querySelector("#password")
+
+let form = document.querySelector("form")
+
+form.addEventListener("submit",function(e){
+  e.preventDefault()
+  if(us.value=="sudharshan"&&ps.value=="sudharshan"){
+    console.log(1)
+    window.location.href="product.html"
+  }
+})
+
 </script>
 </html>

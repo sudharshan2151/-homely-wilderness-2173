@@ -120,7 +120,7 @@
       color: rgb(25, 7, 7);
       border-radius: 10px;
       padding: 10px;
-      font-size: 25px;
+      font-size: 20px;
       display: flex;
       align-items: center;
       
@@ -138,13 +138,13 @@
       color: rgb(25, 7, 7);
       border-radius: 10px;
       padding: 10px;
-      font-size: 25px;
+      font-size: 20px;
       
     }
 
    a{
     text-decoration: none;
-    font-size: 30px;
+   font-size: 25px;
 
    }
    #nav{
@@ -159,9 +159,10 @@
   .dropdown{
     position: relative;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:black
+    color:black;
+    
   }
   .dropdown > a{
     display: flex;
@@ -175,8 +176,8 @@
     opacity:1;
     visibility: visible;
   }
-  .menu>a{
-    font-size:30px;
+  .menu a{
+    font-size: 15px;
     padding:12px 20px;
     color: black;
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -194,6 +195,7 @@
     background-color:white;
    visibility:hidden;
    transition: 0.25s;
+   
   } 
    
   /* /* .menu::before{
@@ -235,12 +237,12 @@
   padding-right: 20px;
   }
   #mid1 button{
-    font-size: 30px;
+   font-size: 25px;
     border: 3px solid white;
   }
 
  #hea>p{
-    font-size: 50px;
+   font-size:40px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -262,7 +264,7 @@
     width: 70%;
    
       text-align: center;
-        font-size: 30px;
+       font-size: 25px;
         margin: auto;
         margin-top: 30px;
 
@@ -275,7 +277,7 @@
     width: 100%;
     
       text-align: center;
-        font-size: 30px;
+       font-size: 25px;
         margin: auto;
        
   }
@@ -299,7 +301,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         background-color: black;
         color: white;
-        font-size: 30px;
+       font-size: 25px;
 
   }
   #explore img{
@@ -311,14 +313,17 @@
   }
   #server{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
    
-    margin-top: 80px;
+    
     font-size: 25px;
     gap: 30px;
     margin: auto;
+    margin-top: 30px;
 
+  }
+  #server>div{
+    width: 100%;
   }
   #server>div:nth-child(1){
     width: 100%;
@@ -339,13 +344,15 @@
     font-size: 40px;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
   }
   #support a{
-    font-size: 45px;
+    font-size: 35px;
   }
   #support>div>p:nth-child(1){
-    font-size: 50px;
+   font-size:30px;
   }
   #support img{
     width: 60px;
@@ -357,11 +364,12 @@
    display: flex;
    justify-content: space-around;
     
-    margin-top: 80px;
+    
     font-size: 25px;
   
     text-align: center;
     margin: auto;
+    margin-top: 30px;;
 
   }
   #server1>div:nth-child(2){
@@ -392,18 +400,22 @@
    
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap:30px
+    gap:30px;
+    text-align: center;
   }
   .show{
     background-color: rgb(253, 253, 251);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-size: 40px;
   }
-  .show>div{
-    width: 90%;
+  
+  .show>div:nth-child(2){
+    width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 30px;
    margin: auto;
-    font-size: 30px;
+   font-size: 25px;
   }
   #footer{
     background-color: rgb(241, 235, 235);
@@ -430,14 +442,20 @@
 #constant button{
   height: 50px;
     width: 200px;
-    right: 10px;
-    bottom:10px;
+    right: 30px;
+    bottom:30px;
     padding:30px;
    font-size: 25px;
-   background-color: rgb(91, 38, 224);
+   background-color: rgb(38, 146, 224);
    position: fixed;
    color:white;
    text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   border: none;
+   
 }
 @media screen and (max-width:800px) {
   .search{
@@ -450,10 +468,130 @@
   .con{
    visibility: hidden;
   }
+  #nav{
+    display: none;
+
+  }
+
   #navbar button:hover{
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       color: black;
     }
+    #explore{
+      grid-template-columns: repeat(1,1fr);
+      
+    }
+    #explore>div{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    #explore1{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #explore1>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  #mid1{
+    display: none;
+  }
+  #server{
+    width: 90%;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: auto;
+    margin: 30px;
+   
+    align-items: center;
+    padding: 30px;
+   
+  }
+  #server>div{
+    width: 100%;
+    display: flex;
+    
+   
+     
+  }
+  #support{
+    flex-direction: column;
+    font-size: 20px;
+
+  }
+  #support a{
+   
+    font-size: 25px;
+
+  }
+  #server1{
+    width: 90%;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: auto;
+    margin: 30px;
+   
+    align-items: center;
+    padding: 30px;
+   
+  }
+  #server div p:nth-child(2){
+  font-size: 30px;
+}
+#server div p:nth-child(3){
+  font-size: 25px;
+}
+#server1 div p:nth-child(2){
+  font-size: 30px;
+}
+#server1 div p:nth-child(3){
+  font-size: 25px;
+}
+#slide{
+  grid-template-columns: repeat(1,1fr);
+  text-align: center;
+}
+.show>div:nth-child(2){
+flex-direction: column;
+}
+#footer{
+    background-color: rgb(241, 235, 235);
+    padding: 30px;
+    font-size: 20px;
+  }
+  .nyc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    text-align: center;
+    
+  }
+  .hi{
+    width: 90%;
+    display: flex;
+    gap:30px;
+    margin: auto;
+  }
+}
+
+
+
+
+#server p:nth-child(2){
+  font-size: 40px;
+}
+#server p:nth-child(3){
+  font-size: 25px;
+}
+#server1 p:nth-child(2){
+  font-size: 40px;
+}
+#server1 p:nth-child(3){
+  font-size: 25px;
+}
+#ser p:nth-child(2){
+  font-size: 40px;
+}
+#ser p:nth-child(3){
+  font-size: 25px;
 }
 </style>
 <body>
@@ -475,6 +613,7 @@
             <a href="">Cart</a>
        <div>
     </nav> -->
+    
     <div id="navbar">
       <img src="./images/Systems and technology programming company logo1.png" alt="" id="logo">
       <div class="wrap">
@@ -484,7 +623,7 @@
              <i class="fa fa-search"></i>
           </button> -->
           <!-- <img src="https://templatefor.net/wp-content/uploads/2018/11/Search-Bar-Solution-600x336.jpg" alt=""> -->
-          <img src="images/Screenshot 2023-04-01 134432.png" alt="">
+          <!-- <img src="images/Screenshot 2023-04-01 134432.png" alt=""> -->
         </div>
         <!-- <img src="https://templatefor.net/wp-content/uploads/2018/11/Search-Bar-Solution-600x336.jpg" alt=""> -->
      </div>
@@ -585,11 +724,11 @@
        </div>
        <div id ="mid1">
         <div>
-            <p style="font-size: 40px;">MDR PRO PLUS</p>
+            <!-- <p style="font-size: 30px;">MDR PRO PLUS</p> -->
         
-            <p style="font-size: 60px;">Resolve Top SecOps Concerns</p>
+            <p style="font-size: 50px;">Resolve Top SecOps Concerns</p>
      
-            <p style="font-size: 40px;">Fully managed, 360° SecOps solution across endpoints, network and cloud.</p>
+            <p style="font-size: 30px;">Fully managed, 360° SecOps solution across endpoints, network and cloud.</p>
             <button>Learn more</button>
         </div>
        
@@ -618,8 +757,8 @@
             <p>
                 SERVERS,STORAGE,NETWORKING
             </p>
-            <P style="font-size: 50px;">Flexible, Scalable IT Solutions</P>
-            <p  style="font-size: 30px;">Power transformation with server, storage and network <br> solutions that adapt and scale to your business needs.</p>
+            <P >Flexible, Scalable IT Solutions</P>
+            <p  >Power transformation with server, storage and network <br> solutions that adapt and scale to your business needs.</p>
            <div> <a href="">Explore Services</a> | <a href="">Explore Services</a></div>
         </div>
         <div>
@@ -633,8 +772,7 @@
         </div>
         <div>
             <div>
-                <img src="https://th.bing.com/th/id/OIP.gaCWQ39wYNYcNorpQxbSaQHaIr?w=153&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
-                <a href="">Dell Technologies Advisors</a>
+               <a href="">Dell Technologies Advisors</a>
                 <p>Let us assist you with any product or services questions</p>
                 <hr>
             </div>
@@ -661,8 +799,8 @@
             <p>
                 POWERSTORE
             </p>
-            <P style="font-size: 40px;">The Future Of Storage Is Now</P>
-            <p  style="font-size: 30px;">Future-proof intelligent storage that redefines <br> performance.</p>
+            <P >The Future Of Storage Is Now</P>
+            <p >Future-proof intelligent storage that redefines <br> performance.</p>
           <a href="">Learn more</a>
         </div>
         
@@ -677,8 +815,8 @@
             <p>
                HANDS-ON LABS
             </p>
-            <P style="font-size: 40px;">Test-Drive IT Solutions</P>
-            <p  style="font-size: 30px;">Dive deeper into cutting-edge infrastructure technology <br> with real-time interactive demos.</p>
+            <P >Test-Drive IT Solutions</P>
+            <p>Dive deeper into cutting-edge infrastructure technology <br> with real-time interactive demos.</p>
           <a href="">Learn more</a>
         </div>
         
@@ -689,8 +827,8 @@
     </div>
     <div  id="ser">
         <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="" style="width:100px">
-        <P style="font-size: 40px;">Give Your Device A Second Life</P>
-        <p style="font-size: 30px;">Recycling your old tech helps us create responsible solutions.</p>
+        <P >Give Your Device A Second Life</P>
+        <p >Recycling your old tech helps us create responsible solutions.</p>
         <a href="">Get Started</a>
     </div>
     <div id = "server1">
@@ -704,8 +842,8 @@
             <p>
                PRECISION
             </p>
-            <P style="font-size: 40px;">Power Your Passion</P>
-            <p  style="font-size: 30px;">Precision workstations provide the performance you need <br>to turn your creations into masterpieces.</p>
+            <P >Power Your Passion</P>
+            <p  >Precision workstations provide the performance you need <br>to turn your creations into masterpieces.</p>
           <a href="">Shop Now</a>
         </div>
         
@@ -718,8 +856,8 @@
             <p>
                 CUSTOMER SUCCESS STORIES
             </p>
-            <P style="font-size: 50px;">Texas Advanced Computing Center</P>
-            <p  style="font-size: 30px;">Digital abstract screens in cyberspace</p>
+            <P >Texas Advanced Computing Center</P>
+            <p  >Digital abstract screens in cyberspace</p>
             <a href="">Learn More</a>
         </div>
         <div>
@@ -733,7 +871,7 @@
         <div id="slide">
             <div class = "show">
                 <div>
-                    <P style="font-size: 40px;">What We Do</P>
+                    <P >What We Do</P>
                </div>
                 <div>
                 <div>
@@ -875,7 +1013,7 @@
   let img = document.getElementById("logo")
 
 img.addEventListener("click",function(){
-    window.location.href="index.html"
+    window.location.href="data.html"
 })
 let sign = document.querySelector(".sign")
 let cart = document.querySelector(".cartin")
@@ -899,5 +1037,363 @@ lap.addEventListener("click",function(){
   window.location.href="product.html"
 
 })
+let a = [
+   {
+  img:"https://m.media-amazon.com/images/I/51FIQy0xIOL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 Monitor",
+price:54889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+   {
+  img:"https://m.media-amazon.com/images/I/91k1BzO9FiL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 Monitor",
+price:74889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+     {
+  img:"https://m.media-amazon.com/images/I/41HPbhGPHzS._AC_UY327_FMwebp_QL65_.jpg",
+title:"Dell 3510 Monitor",
+price:154889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+       {
+  img:"https://m.media-amazon.com/images/I/51yI9qJ-Q2L._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 ",
+price:84889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+  {
+  img:"https://m.media-amazon.com/images/I/61OzpxS3bWL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 ",
+price:134889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+     {
+  img:"https://m.media-amazon.com/images/I/51jHQ+aklfL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 ",
+price:54889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },   {
+  img:"https://m.media-amazon.com/images/I/81253UP5hNS._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 ",
+price:54889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },   
+  {
+  img:"https://m.media-amazon.com/images/I/51yI9qJ-Q2L._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 ",
+price:55889.0,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+]
+let mon = JSON.parse(localStorage.getItem("monitor")) || []
+mon = [...a]
+localStorage.setItem("monitor",JSON.stringify(mon))
+console.log(mon)
+
+
+
+
+
+
+let b = [
+  
+  {
+    img:"https://m.media-amazon.com/images/I/81rTYNStzzL._AC_UY327_QL65_.jpg",
+title:"Alienware m15 R7 Gaming Laptop",
+price:272489.99,
+processor:"12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3050, 4 GB GDDR6",
+ram:"32GB, 2x16GB, DDR5, 4800MHz",
+rom:"1 TB, M.2 2280, PCIe NVMe, SSD",
+display:"15.6, QHD 2560x1440, 240Hz, Non-Touch, Wide Viewing Angle",
+quantity:1,
+  },
+  {
+    img:"https://m.media-amazon.com/images/I/61K9AyvhgmL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Inspiron 14 Laptop",
+price:74990.00,
+processor:"12th Gen Intel® Core™ i7-1255U (12 MB cache, 10 cores, 12 threads, up to 4.70 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® Iris® Xe Graphics",
+ram:"16 GB, 2 x 8 GB, DDR4, 3200 MHz",
+rom:"512 GB, M.2, PCIe NVMe, SSD",
+display:"14.0-inch 16:10 FHD+ (1920 x 1200) Anti-Glare Non-Touch 250nits WVA Display with ComfortView Support",
+quantity:1,
+  },
+   {
+    img:"https://m.media-amazon.com/images/I/51-qYxIfJwL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Inspiron 16 Laptop",
+price:70990.01,
+processor:"12th Generation Intel® Core™ i5-1235U (12MB Cache, up to 4.4 GHz)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 3200 MHz",
+rom:"512 GB, M.2, PCIe NVMe, SSD",
+display:"16, FHD+ 1920x1200, 60Hz, Non-Touch, AG, Wide Viewing Angle, 250 nit, ComfortView",
+quantity:1,
+  },
+    {
+    img:"https://m.media-amazon.com/images/I/61Zwojyjm5L._AC_UY327_FMwebp_QL65_.jpg",
+title:"G15 Gaming Laptop",
+price:74489.99,
+processor:"AMD Ryzen™ 5 6600H (19 MB total cache, 6 cores, 12 threads, up to 4.50 GHz Max Boost Clock)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3050, 4 GB GDDR6",
+ram:"8 GB, 1 x 8 GB, DDR4, 4200 MHz",
+rom:"512 GB, M.2, PCIe, SSD",
+display:"15.6, FHD 1920 x 1080, 120Hz, WVA, Non-Touch, Anti-Glare, 250 nit, Narrow Border, LED-Backlit",
+quantity:1,
+  },
+   {
+    img:"https://m.media-amazon.com/images/I/41oGjCvztKL._AC_UY327_FMwebp_QL65_.jpg",
+title:"G15 Gaming Laptop",
+price:88489.98,
+processor:"12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3050, 4 GB GDDR6",
+ram:"16GB, 2x8GB, DDR5, 4800MHz",
+rom:"512 GB, M.2, PCIe, SSD",
+display:"15.6, FHD 1920 x 1080, 120Hz, WVA, Non-Touch, Anti-Glare, 250 nit, Narrow Border, LED-Backlit",
+quantity:1,
+  },
+   {
+    img:"https://m.media-amazon.com/images/I/719In-FEOcL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Alienware x14 Gaming Laptop",
+price:179989.98,
+processor:"12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3050, 4 GB GDDR6",
+ram:"16GB, 2x8GB, DDR5, 4800MHz",
+rom:"512 GB, M.2, PCIe, SSD",
+display:"14, FHD 1920x1080, 144Hz, Non-Touch, 3ms, Advanced Optimus, ComfortView Plus, NVIDIA G-SYNC",
+quantity:1,
+  },
+     {
+  img:"https://m.media-amazon.com/images/I/61ZbmBmQbqL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Vostro 3510 Laptop",
+price:43990.00,
+processor:"11th Gen Intel® Core™ i3-1115G4 (6 MB cache, 2 cores, 4 threads, up to 4.10 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® UHD Graphics",
+ram:"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
+rom:"256GB M.2 PCIe NVMe Solid State Drive (Boot) + 1TB 5400 rpm 2.5 SATA Hard Drive (Storage)",
+display:"15.6, FHD 1920x1080, 60Hz, Non-Touch, AG, WVA, LED-Backlit, Narrow Border",
+quantity:1,
+  },
+  {
+    img:"https://m.media-amazon.com/images/I/71Ncb6z2gfL._AC_UY327_FMwebp_QL65_.jpg",
+title:"XPS 13 Laptop",
+price:99989.98,
+processor:"12th Generation Intel® Core™ i5-1230U (12MB Cache, up to 4.4 GHz, 10 cores)",
+window:"Windows 11 Home Single Language, English",
+inte:"Intel® Iris® Xe Graphics",
+ram:"8 GB, LPDDR5, 5200 MHz, integrated, dual-channel",
+rom:"256GB PCIe NVMe x2 Solid State Drive Onboard",
+display:"13.4 FHD+ (1920 x 1200) InfinityEdge Non-Touch Anti-Glare 500-Nit Display",
+quantity:1,
+  },
+  {
+    img:"https://m.media-amazon.com/images/I/61ObaZlp0sL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Alienware m15 R7 Gaming Laptop",
+price:192490.00,
+processor:"AMD Ryzen™ 7 6800H (8-Core/16 Thread, 20MB Cache, up to 4.7 GHz max boost)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3070 Ti, 8 GB GDDR6",
+ram:"16GB, 2x8GB, DDR5, 4800MHz",
+rom:"1TB M.2 PCIe NVMe Solid State Drive",
+display:"15.6 FHD (1920 x 1080) 165Hz 3ms with ComfortView Plus, NVIDIA G-SYNC and Advanced Optimus",
+quantity:1,
+  },
+  {
+    img:"https://m.media-amazon.com/images/I/61K9AyvhgmL._AC_UY327_FMwebp_QL65_.jpg",
+title:"Dell G15 Gaming Laptop",
+price:88489.98,
+processor:"12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo)",
+window:"Windows 11 Home Single Language, English",
+inte:"NVIDIA® GeForce RTX™ 3070 Ti, 8 GB GDDR6",
+ram:"16GB, 2x8GB, DDR5, 4800MHz",
+rom:"512 GB, M.2, PCIe, SSD",
+display:"15.6 FHD (1920 x 1080) 165Hz 3ms with ComfortView Plus, NVIDIA G-SYNC and Advanced Optimus",
+quantity:1,
+  },
+  
+]
+
+let data1 = JSON.parse(localStorage.getItem("data")) || []
+data1=[...b,...a]
+localStorage.setItem("data",JSON.stringify(data1))
+console.log(data1)
+let c =[
+  {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/g-series/g2422hs/media-gallery/monitor-g2422hs-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Dell 24 Gaming Monitor-G2422HS",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+
+    price:25699.01,
+  },
+   {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw3423dwf/media-gallery/monitor-alienware-aw3423dwf-black-gallery-10.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware 34 Cured QD-OLED Gaming Monitor-AW3423DWF",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:123534.24
+  },
+     {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2723df/media-gallery/monitor-alienware-aw2723df-white-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware 27 Gaming Monitor-AW3423DWF",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:59999.00,
+  },
+    {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~210-AXNF_V3/210-AXNF_V3.jpg",
+  title:"Alienware 38 Curved Gaming Monitor-AW3423DWF",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:131335.00,
+  },
+   {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~460-BDHD/460-BDHD.jpg",
+  title:"Alienware Horizon Travel Backpack",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:9799.00,
+  },
+   {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~460-BDGW/460-BDGW.JPG",
+  title:"Alienware Horizon Utility Backpack",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:6499.00,
+  },
+   {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~460-BDHC/460-BDHC.jpg",
+  title:"Alienware Horizon Slim Backpack",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:4099.00,
+  },
+   {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~460-BDHH/460-BDHH.jpg",
+  title:"Alienware Horizon Commuter Backpack",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:5899.00,
+  },
+   {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~460-BCZG/460-BCZG.jpg",
+  title:"Dell Gaming Horizon Commuter Backpack",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:5614.00,
+  },
+  {
+    img:"https://snpi.dell.com/snp/images/products/large/en-in~520-AARO/520-AARO.jpg",
+  title:"Alienware 310H Gaming Headset - AW310H",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:5414.00,
+  },
+   {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-720m-wireless-mouse/assets/mouse-aw720m-wh-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Tri-Mode Wireless Gaming Mouse - AW720M",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:10899.00,
+  },
+     {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-720m-wireless-mouse/assets/mouse-aw720m-bk-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Tri-Mode Wireless Gaming Mouse - AW720M",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:10799.00,
+  },
+    {
+    img:"https://i.dell.com/is/image/DellContent//content/dam/images/products/electronics-and-accessories/dell/pointing-devices/aw610m/aw610m-ckb-4050lb-gy.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Wired Wireless Gaming Mouse - AW720M",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:7799.00,
+  },
+   {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-920h-wireless-headset/media-gallery/headphone-alienware-aw920h-bk-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Tri-Mode Wireless Gaming Mouse - AW720M-Dark Side of the Moon",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:15799.00,
+  },
+     {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-920h-wireless-headset/media-gallery/headphone-alienware-aw920h-wh-gallery-1.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Tri-Mode Wireless Gaming Headset - AW920H",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:15499.00,
+  },
+    {
+    img:"https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-320m-mouse/assets/mouse-alienware-aw320m-black-gallery-5.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+  title:"Alienware Wired Gaming Headset - AW920H",
+  des:"Manufacturer Part FDR0X Dell Part 210-BFOX",
+  quantity:1,
+    price:5499.00,
+  },
+  
+  
+]
+let data2 = JSON.parse(localStorage.getItem("accesories")) || []
+data2=[...c]
+localStorage.setItem("accesories",JSON.stringify(data2))
+console.log(data2)
+
 </script>
 </html>
