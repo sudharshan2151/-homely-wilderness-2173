@@ -36,6 +36,3 @@ In this project we have tried to achieve like the  original design as much as po
 
 Pages are not fully responsive yet, those pages might not be properly visible on small screen devices as we were given only 5 days to clone the website.
 
-
-### Deploy link :- 
-  https://645a633cf7f2233ad2360ed4--moonlit-biscochitos-f246b7.netlify.app/
