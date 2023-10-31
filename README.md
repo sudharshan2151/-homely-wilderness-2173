@@ -1,7 +1,5 @@
 # -homely-wilderness-2173
 
-### 🏫 Hotel Card
-
 In this project we have tried to manipulate Dom elements, Styling using CSS and tried to make website more dynamic and responsive. With our  efforts and the technology that we have learned in Unit-2 in the Masai School, we were able to creatr the website in 5 days with the same looking and some features.
 
 
